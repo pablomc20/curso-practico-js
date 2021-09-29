@@ -104,3 +104,4 @@ dist
 .tern-port
 
 # Configuracion de VS Code
+.vscode
