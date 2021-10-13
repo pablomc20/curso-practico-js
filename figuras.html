@@ -7,7 +7,65 @@
     <title>Figuras geométricas</title>
 </head>
 <body>
-    <h1>Figuras geométricas</h1>
+    <header>
+        <h1>Figuras geométricas</h1>
+        <p>Curso práctico de JS</p>
+    </header>
+
+    <section>
+        <h2>Calcula el área y perímetro de un cuadrado</h2>
+        <form>
+            <!-- SQUARE -->
+            <label for="sideSquare">Cuanto mide el lado de tu cuadrado</label>
+            <input type="number" name="sideSquare" id="sideSquare">
+            <br>
+            <button type="button" id="getPerimeterSquare">
+                Calcular perímetro
+            </button>
+            <button type="button" id="getAreaSquare">
+                Calcular área
+            </button>
+        </form>
+        
+        <h2>Calcula el área y perímetro de un triángulo</h2>
+        <form>
+            <!-- TRIANGLE -->
+            <label for="sideTriangle1">Cuanto mide el primer lado de tu triángulo</label>
+            <input type="number" name="sideTriangle1" id="sideTriangle1">
+            <br>
+            <label for="sideTriangle2">Cuanto mide el segundo lado de tu triángulo</label>
+            <input type="number" name="sideTriangle2" id="sideTriangle2">
+            <br>
+            <label for="baseTriangle">Cuanto mide la base de tu triángulo</label>
+            <input type="number" name="baseTriangle" id="baseTriangle">
+            <br>
+            <label for="heightTriangle">Cuanto mide la altura de tu triángulo</label>
+            <input type="number" name="heightTriangle" id="heightTriangle">
+            <br>
+            <button type="button" id="getPerimeterTriangle">
+                Calcular perímetro
+            </button>
+            <button type="button" id="getAreaTriangle">
+                Calcular área
+            </button>
+        </form>
+
+        <h2>Calcula el área y perímetro de un círculo</h2>
+        <form>
+            <!-- CIRCLE -->
+            <label for="radiusCircle">Cuanto mide el radio de tu circulo</label>
+            <input type="number" id="radiusCircle">
+            <br>
+            <button type="button" id="getPerimeterCircle">
+                Cualcular perímetro
+            </button>
+            <button type="button" id="getAreaCircle">
+                Calcular el área
+            </button>
+        </form>
+    </section>
+
+
 
     <script src="figuras.js"></script>
 </body>

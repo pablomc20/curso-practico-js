@@ -1,43 +1,72 @@
+const d = document;
+// VARIABLES USADAS PARA EL CUADRADO
+const $inputSquare = d.getElementById('sideSquare');
+const $btnPerimeterSquare = d.getElementById('getPerimeterSquare');
+const $btnAreaSquare = d.getElementById('getAreaSquare');
+// VARIABLES USADAS PARA EL TRIÁNGULO
+const $inputSide1Triangle = d.getElementById('sideTriangle1');
+const $inputSide2Triangle = d.getElementById('sideTriangle2');
+const $inputBaseTriangle = d.getElementById('baseTriangle');
+const $inputHeightTriangle = d.getElementById('heightTriangle');
+const $btnPerimeterTriangle = d.getElementById('getPerimeterTriangle');
+const $btnAreaTriangle = d.getElementById('getAreaTriangle');
+// VARIABLES USADAS PARA EL CIRCULO
+const $inputRadiusCircle = d.getElementById('radiusCircle');
+const $btnPerimeterCircle = d.getElementById('getPerimeterCircle');
+const $btnAreaCircle = d.getElementById('getAreaCircle');
+
 // CÓDIGO DEL CUADRADO
-const sideSquare = 10;
-console.group('Cuadrado');
-console.log(`Los lados del cuadrado miden: ${sideSquare} cm`);
+const perimeterSquare = (side) => side * 4;
 
-const perimeterSquare = sideSquare * 4;
-console.log(`El perimetro del cuadrado es: ${perimeterSquare} cm^2`);
+const areaSquare = (side) => side * side;
 
-const areaSquare = sideSquare * sideSquare;
-console.log(`El area del cuadrado es: ${areaSquare}`);
-console.groupEnd();
+$btnPerimeterSquare.addEventListener('click', () => {
+    let perimeter = perimeterSquare($inputSquare.value);
+
+    alert(`El perímetro del cuadrado es: ${perimeter}`)
+});
+
+$btnAreaSquare.addEventListener('click', () => {
+    let area = areaSquare($inputSquare.value);
+
+    alert(`El área del cudrado es: ${area}`)
+});
 
 // CÓDIGO DEL TRIÁNGULO
-console.group('Triángulo');
-const side1Triangle = 6;
-const side2Triangle = 6;
-const side3Triangle = 4;
-console.log(`Los lados del triángulo miden: ${side1Triangle}cm, ${side2Triangle}cm, ${side3Triangle}cm.`);
+const perimeterTriangle = (side1, side2, base) => side1 + side2 + base;
 
-const heightTriangle = 5.5;
-console.log(`La altura del triángulo es de: ${heightTriangle}cm.`);
+const areaTriangle = (base, height) => (base * height) / 2;
 
-const perimeterTriangle = side1Triangle + side2Triangle + side3Triangle;
-console.log(`El perimetro del triángulo es de: ${perimeterTriangle}cm.`)
+$btnPerimeterTriangle.addEventListener('click', () => {
+    let perimeter = perimeterTriangle(
+        $inputSide1Triangle.value,
+        $inputSide2Triangle.value,
+        $inputBaseTriangle.value
+    );
 
-const areaTriangle = (side3Triangle * heightTriangle) / 2;
-console.log(`El area del triángulo es: ${areaTriangle}cm.`)
-console.groupEnd();
+    alert(`El perímetro del triángulo es: ${perimeter}`)
+});
+
+$btnAreaTriangle.addEventListener('click', () => {
+    let area = areaTriangle($inputBaseTriangle.value, $inputHeightTriangle.value);
+
+    alert(`El área del triángulo es: ${area}`);
+});
 
 // CÓDIGO DEL CIRCULO
-console.group('Círculo');
-// const PI = 3.1416;
 const PI = Math.PI;
-const radius = 6;
-console.log(`El radio del círculo es de: ${radius}cm.`);
+const perimeterCircle = (radius) => PI * (radius * 2);
 
-const perimeterCircle = PI * (radius * 2);
-console.log(`El perimetro del círculo mide: ${perimeterCircle}cm.`);
+const areaCircle = (radius) => PI * (radius * radius);
 
-const areaCircle = PI * (radius * radius);
-console.log(`El area del círculo es de: ${areaCircle}cm`);
+$btnPerimeterCircle.addEventListener('click', () => {
+    let perimeter = perimeterCircle($inputRadiusCircle.value);
 
-console.groupEnd();
+    alert(`El perímetro del circulo es: ${perimeter}`);
+});
+
+$btnAreaCircle.addEventListener('click', () => {
+    let area = areaCircle($inputRadiusCircle.value);
+
+    alert(`El área del circulo es: ${area}`);
+});
