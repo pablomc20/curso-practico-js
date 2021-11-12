@@ -46,9 +46,6 @@ class Triangle {
             // a**2 + b**2 = c**2       ===        a = r[c**2 - (b**2 / 4)]
             // height        **2  + base           = side
             // major leg  **2  + minor leg   = hypotenuse
-            console.log(Math.pow(this.sideA, 2));
-            console.log(Math.pow(this.sideA, 2) - (Math.pow(this.base, 2) / 4));
-            console.log(Math.sqrt((Math.pow(this.sideA, 2) - (Math.pow(this.base, 2) / 4))));
             return Math.sqrt((Math.pow(this.sideA, 2) - (Math.pow(this.base, 2) / 4)));
         }
 
