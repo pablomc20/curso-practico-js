@@ -8,3 +8,10 @@
 - Segundo paso implementar fórmulas en JS
 - Tercer paso: crear funciones
 - Cuarto paso: integrar JS con HTML
+
+## Taller #2: desscuentos
+
+1. definir fórmulas
+2. implementar fórmulas en JS
+3. crear funciones
+4. integrar JS con HTML
