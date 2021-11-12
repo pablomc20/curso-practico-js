@@ -8,8 +8,7 @@ const $inputSide1Triangle = d.getElementById('sideTriangle1');
 const $inputSide2Triangle = d.getElementById('sideTriangle2');
 const $inputBaseTriangle = d.getElementById('baseTriangle');
 const $inputHeightTriangle = d.getElementById('heightTriangle');
-const $btnPerimeterTriangle = d.getElementById('getPerimeterTriangle');
-const $btnAreaTriangle = d.getElementById('getAreaTriangle');
+const $btnPDataTriangle = d.getElementById('getDataTriangle');
 // VARIABLES USADAS PARA EL CIRCULO
 const $inputRadiusCircle = d.getElementById('radiusCircle');
 const $btnPerimeterCircle = d.getElementById('getPerimeterCircle');
@@ -33,24 +32,23 @@ $btnAreaSquare.addEventListener('click', () => {
 });
 
 // CÓDIGO DEL TRIÁNGULO
-const perimeterTriangle = (side1, side2, base) => side1 + side2 + base;
+const side1 = $inputSide1Triangle,
+    side2 = $inputSide2Triangle,
+    base = $inputBaseTriangle;
+    
+$btnPDataTriangle.addEventListener('click', () => {
+    let triangle = new Triangle(side1.value, side2.value, base.value),
+        area = triangle.getArea();
+        height = triangle.getHeight();
+        perimeter = triangle.getPerimeter();
+        typeTriangle = triangle.getTypeTriangle();
 
-const areaTriangle = (base, height) => (base * height) / 2;
-
-$btnPerimeterTriangle.addEventListener('click', () => {
-    let perimeter = perimeterTriangle(
-        $inputSide1Triangle.value,
-        $inputSide2Triangle.value,
-        $inputBaseTriangle.value
-    );
-
-    alert(`El perímetro del triángulo es: ${perimeter}`)
-});
-
-$btnAreaTriangle.addEventListener('click', () => {
-    let area = areaTriangle($inputBaseTriangle.value, $inputHeightTriangle.value);
-
-    alert(`El área del triángulo es: ${area}`);
+    alert(`
+        ${typeTriangle}
+        El área del triángulo es: ${area}
+        El perímetro del triángulo es: ${perimeter}
+        La altura del triángulo es: ${height}
+    `);
 });
 
 // CÓDIGO DEL CIRCULO
