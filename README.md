@@ -1,6 +1,6 @@
 # curso-practico-js
 
-...
+....
 
 ## Taller #1: figuras geométricas
 
