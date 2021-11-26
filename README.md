@@ -9,7 +9,14 @@
 - Tercer paso: crear funciones
 - Cuarto paso: integrar JS con HTML
 
-## Taller #2: desscuentos
+## Taller #2: descuentos
+
+1. definir fórmulas
+2. implementar fórmulas en JS
+3. crear funciones
+4. integrar JS con HTML
+
+## Taller #3: promedios
 
 1. definir fórmulas
 2. implementar fórmulas en JS
